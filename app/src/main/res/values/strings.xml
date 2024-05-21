@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CoinCollector</string>
+    <string name="add_coin_activity_label">Add Coin</string>
+    <string name="value_chart_activity_label">Value Chart</string>
+    <string name="year_hint">Year</string>
+    <string name="rarity_hint">Rarity</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="value_hint">Value</string>
+    <string name="save_button">Save</string>
+</resources>

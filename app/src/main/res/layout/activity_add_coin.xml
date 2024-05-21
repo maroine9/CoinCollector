@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/yearEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/year_hint"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/rarityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/rarity_hint"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/quantityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/quantity_hint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/valueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/value_hint"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/coinImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"/>
+
+    <Button
+        android:id="@+id/captureImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
+</LinearLayout>
