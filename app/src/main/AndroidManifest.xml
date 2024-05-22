@@ -43,7 +43,8 @@
             android:name=".ValueChartActivity"
             android:exported="true"
             android:label="@string/value_chart_activity_label"
-            android:theme="@style/Theme.CoinCollector">
+            android:theme="@style/Theme.CoinCollector"
+            android:screenOrientation="landscape">
         </activity>
 
         <provider
