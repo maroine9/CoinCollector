@@ -7,47 +7,95 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/yearLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year:"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/yearTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Year"
+        android:text="year"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/yearLabelTextView"
+        app:layout_constraintStart_toEndOf="@id/yearLabelTextView"
+        app:layout_constraintBaseline_toBaselineOf="@id/yearLabelTextView" />
+
+    <TextView
+        android:id="@+id/rarityLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rarity:"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/yearLabelTextView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/rarityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rarity"
+        android:text="rarity"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/yearTextView"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/rarityLabelTextView"
+        app:layout_constraintStart_toEndOf="@id/rarityLabelTextView"
+        app:layout_constraintBaseline_toBaselineOf="@id/rarityLabelTextView" />
+
+    <TextView
+        android:id="@+id/quantityLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity:"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/rarityLabelTextView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/quantityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity"
+        android:text="quantity"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/rarityTextView"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/quantityLabelTextView"
+        app:layout_constraintStart_toEndOf="@id/quantityLabelTextView"
+        app:layout_constraintBaseline_toBaselineOf="@id/quantityLabelTextView" />
+
+    <TextView
+        android:id="@+id/valueLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value:"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/quantityLabelTextView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/valueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Value"
+        android:text="value"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/quantityTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/valueLabelTextView"
+        app:layout_constraintStart_toEndOf="@id/valueLabelTextView"
+        app:layout_constraintBaseline_toBaselineOf="@id/valueLabelTextView" />
 
     <ImageView
         android:id="@+id/coinImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="Coin Image"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

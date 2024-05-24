@@ -31,11 +31,15 @@ class ValueChartActivity : AppCompatActivity() {
 
     private fun loadChartData() {
         val coins = db.coinDao().getAll()
-        val entries = coins.mapIndexed { index, coin ->
-            Entry(index.toFloat(), coin.value.toFloat())
+        val entries = mutableListOf<Entry>()
+        var totalValue = 0f
+
+        coins.forEachIndexed { index, coin ->
+            totalValue += coin.value.toFloat()
+            entries.add(Entry(index.toFloat(), totalValue))
         }
 
-        val dataSet = LineDataSet(entries, "Valeur des Pièces").apply {
+        val dataSet = LineDataSet(entries, "Évolution de la Valeur Totale").apply {
             color = resources.getColor(R.color.teal_200)
             valueTextColor = resources.getColor(R.color.white)
             setCircleColor(resources.getColor(R.color.teal_200))
@@ -49,7 +53,7 @@ class ValueChartActivity : AppCompatActivity() {
         chart.data = lineData
 
         chart.apply {
-            description = Description().apply { text = "Évolution de la Valeur" }
+            description = Description().apply { text = "Évolution de la Valeur Totale" }
             setNoDataTextColor(resources.getColor(R.color.white))
             setNoDataText("No data available.")
             setBackgroundColor(resources.getColor(R.color.black))
